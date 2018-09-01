@@ -55,12 +55,16 @@ func ParallelSum(slcs ...[]int) []int {
 var Sum func(sum chan []int) (output chan []int)
 
 func main() {
-	fmt.Println(`Please edit main.go,and complete the 'Sum' function for the parallel sum to pass the test.
-Concurrency is the most important feature of Go,and the principle is
-'Do not communicate by sharing memory; instead, share memory by communicating.'
-In this exercise you need to catch many features of channels.This is a tour for you to figure out!
-Because here the focus is pipleline model (link:http://blog.golang.org/pipelines).
-It's different from the custom parallel vector sum in which sum numer at every index of the vectors in a goroutine.
-In this exercies,vector is just a abstract,you can change it to a struct or any thing else that can be sumed up.
-`)
+
+	s := []int{1, 2, 3, 4}
+	fmt.Println(ParallelSum(s))
+
+//	fmt.Println(`Please edit main.go,and complete the 'Sum' function for the parallel sum to pass the test.
+//Concurrency is the most important feature of Go,and the principle is
+//'Do not communicate by sharing memory; instead, share memory by communicating.'
+//In this exercise you need to catch many features of channels.This is a tour for you to figure out!
+//Because here the focus is pipleline model (link:http://blog.golang.org/pipelines).
+//It's different from the custom parallel vector sum in which sum numer at every index of the vectors in a goroutine.
+//In this exercies,vector is just a abstract,you can change it to a struct or any thing else that can be sumed up.
+//`)
 }
